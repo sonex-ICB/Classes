@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>
+        <a href="#"><button class="btn btn-success m-2  btn-sm">PREV CLASS</button></a>
+        <a href="class2.html"><button class="btn btn-success m-2  btn-sm">NEXT CLASS</button></a>
+    </p>
+    <div id="text1" class="p-2 text-primary"></div>
+    <div id="text2" class="p-2 text-primary"></div>
+    <button onclick="greet()" class=" btn btn-primary"> Greet Function </button>
+    <!--  CLASS 16 JavaScript  -->
+    <!-- This tutorial uses internal script after the body tag -->
+    <!-- JavaScript output - 
+        JavaScript can "display" data in different ways:
+            Writing into the browser console, using console.log().
+            Writing into an HTML element, using innerHTML.
+            Writing into the HTML output using document.write().
+            Writing into an alert box, using window.alert().    
+    -->
+    <script>
+        /*
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::JAVASCRIPT OUTPUT :::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        */
+        // wrinting  "Hello world!" into  the browser console
+        console.log("Hello World!");
+        // open the html file 
+        // right click on empty space and select inspect
+        // switch to console. 
+        // writing into a specific HTML element, create an element with id='demo'
+        document.getElementById('demo').innerHTML = 'Hello World!';
+        // writting into the alert box
+        window.alert("This is an Alert Box");
+        // writting into directly into the HTML document
+        document.write('Hello World!');
+        /*
+        NOTE:
+            Using document.write() after an HTML document is loaded, will delete all existing HTML
+            because it writes over everything that was there before.it should only be used for testing purpose
+            else be sure of the result
+            using console is also only for development  purposes, 
+            you can freely use an html element or alert to display content on a website
+        */
+
+          /*
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::JAVASCRIPT COMMENTS:::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        */
+        // comments - comments are not executed by the browser
+        // this is a comment
+        // document.getElementById('demo').innerHTML = 'Hello World!';  <- this is code will not execute
+        // ::::
+        // ::::
+        // ::::
+        // ::::
+          /*
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::JAVASCRIPT VARIABLES :::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        */
+        // variables  - variables are data containers 
+        // variables are created with the  keyword var, let or const followed by the variable name
+        var name = 'Mark Henry';
+        let number = 1234;
+        const state = "Lagos";
+        // automatic declaration -  They are automatically declared when first used: 
+        country = 'Nigeria';
+        // in programming variables help to store data which can be referenced to at different times of need
+        /*
+            if we have an expression
+            a = 3;
+            y = a+3
+            it means the value of y is 6; this allows us to reference to 3 using a multiple times
+            c = a-2;
+            x = a/1;
+            z = a*2
+            by simply changing the value of a which is 3, this will alter the expressions where a was used
+        */
+        // variables can change values
+        let num1 = 1234;
+            num1 = 5678;
+        // variables can be used as values to other variables    
+        let num2 = num1 // NOTE: num1 has already been created  above
+        // variables can re-assume themselves as values
+        num1 = num1;
+        num2 = num1+num2;
+        /*
+        NOTE:    
+            1. All JavaScript variables must be identified with unique names.
+            2. These unique names are called identifiers.
+            3. Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+            4. Names can contain letters, digits, underscores, and dollar signs.
+            5. Names must begin with a letter.
+            6. Names can also begin with $ and _ (but we will not use it in this tutorial).
+            7. Names are case sensitive (y and Y are different variables).
+            8. Reserved words (like JavaScript keywords) cannot be used as names.
+            9. JavaScript identifiers are case-sensitive. So, name,Name and NAME are three distinct variables.
+        */ 
+   
+        //    JavaScript stmts
+        let  num = 10;                   // this is a stmt
+        // stmts can be seperated with semi-colons (;) but optional if each stmt comes in a new line 
+        console.log("The number is "+num)// this is another stmt
+        alert(num+" is my favorite number") // this is yet another stmt
+        // the above stmts will not encounter error with or without a semi-colon since they're on different lines
+        num2 = 12; num3 = 14 // this will render error without a semi-colon between them 
+        // one declaration multitple variables
+        let person = "John Doe", carName = "Volvo", price = 200;
+        // variables without values 
+        let company_name;
+        // multiple variables without values 
+        let  first_name, last_name, email;
+        // last varaiable takes a value
+        let color1, color2, color3 = 'red';
+        // do not redeclare variables with let or  const
+        //let num = 9;       // ERROR!
+        var text1 = 'My text'; // no error
+        var text1 = 'New Text'; // no error
+        // as much as possible avoid redclaring variables
+        /*
+            EXERCISE:::::::::::::::::::::::::::::::::
+            1. write out the text "Javascript is Awesome" using the four output methods
+            2. create four variables of different values and write out their values
+            :::::::::::::::::::::::::::::::::::::::::
+        */
+        /*
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::JAVASCRIPT DATATYPES :::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        Data types in JavaScript define the data type that a variable can store.
+        1. string 
+        2. number
+        3. boolean
+        4. object - array,undefined,function,dates,objects
+        
+        */
+       str1 = 'hello world' // strin 
+       str2 = 'Javascript is Awesome!' // string
+       num1 = 12; // number 
+       num2 = 2; // number
+       ismarried = true // boolean
+       isLight = false //false
+       age = undefined // undefined
+        //    arrays - Arrays are Objects. Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+        // we can best describe arrayed as list of items say fruits, names, colors etc, 
+        // array can stores multiple values
+        fruits = ['apple', 'banana', 'orange', 'mango', 'grape'] // array
+        // we can access array elements using their index
+        console.log(fruits[0]) // apple
+        console.log(fruits[1]) // banana
+        console.log(fruits[2]) // orange
+        
+        // objects - Objects are containers for Properties and Methods. Properties are named Values. Methods are Functions
+        // unlike arrays object has a keys and value syntax, each key is assigned a value and accessed by the key
+        person = {firstName: 'John', lastName: 'Doe', age: 50,}// object of person
+        console.log(person.firstName) // John
+        console.log(person.lastName) // Doe
+        console.log(person.age) // 50
+        // null - null is a special value that represents the intentional absence of any object value.
+        // null is not the same as undefined, which indicates that a variable has not been declared or
+        // has not been given a value.
+        user = null //object
+        console.log(user) // null
+        
+       //date  - Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of date objects, using either local time or UTC (universal) time.
+       today = new Date();
+       console.log(today) // current date and time
+       /*
+       EXERCISE:::::::::::::::::::::::::::::::::::::
+        1. Create variables of different data types 
+        2. create a list of courses - HTML, CSS,Javascript, Python
+        3. Create a list of grades - A,B,C,D
+        4. Store these values in a single variable and use it to create a UI component
+            a. name - solomon
+            b. favoriteColors - red,white
+            c. bestMeal  - 'Fried Rice'
+            d. courses - Python, javascript
+            e. age - 23
+            f. email = solomon@mail.com
+            h. phone = 08074810067
+        5. Structure this data using one variable
+            Exams = Class1: Q1. What is a computer?
+                            Q2. What is computer programming?
+                            Q3. List three programming languages you know
+                    Class2: Q1. What is is network?
+                            Q2. what are the types of network?
+                            Q3. State uses of network
+                    class3. Q1. What is web design
+                            Q2. list examples of web technologies in web design
+                            Q3. What is the importance of web design
+       ::::::::::::::::::::::::::::::::::::::::::::
+        * /
+        
+        /*
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::JAVASCRIPT OPERATORS :::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+       
+     operators - an operator is a symbol or keyword that creates an expression on one or more values to perform some type of operation. 
+        operators 
+        Arithmetic operators : + - * / %
+        comparison operators : ==,===,<,<=,>,=>
+        asignment Operators : =,+=,-=,/=
+        logical Operators   : && - AND , || - OR, ! - NOT
+    */
+//    arithmetic operators
+   let n1 = 12+2 // addition  = 14
+   let n2 = 12-2 //substraction = 10
+   let n3 = 12/2  // division = 6
+   let n4 = 12%2  // Modulo = 0 returns the remainder of a fraction
+    //using console to display content    
+    console.log(n1)
+    console.log(n2)
+    console.log(n3)
+    console.log(n4)
+    // comparison = compares two values
+    let bool1 = 10>2 // true checks if 10 is greater than 2
+    let bool2 = n1==n2 // false checks if n1 is  equal to n2 (same)
+    let bool3 = n2===3// false checks if n2 is same with n3 both in value and data type (you will learn about data types later)
+    // assignment
+    let text1 = 'Hello world' // assigns hello world to text1
+        num = 1234 // asigns  1234 to num1
+        num2 = 12;
+        num2+=2 // addition assignment  adds 2 to num2 and stores it in num2
+        num1-=12 // substraction assignment takes 12 from num1 and stores in in num1
+    
+    // logical Operators
+    console.log(10&&12>2); //true 10 and 12 is  greater than 2
+    console.log(10&&3>6); //false 10 is  greater than 6 but not 3
+    console.log(10>2 || 3>6); //true returns true if any of the conditions is true
+    console.log(10>2 || 3<6); //true returns true if any of
+    console.log(10>2 && 3<6); //true returns true if both conditions
+    /*
+    EXERCISE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    1. Create a variable called `a` and `b` assign them values 10 and 20
+        a. What is a = a
+        b. What is a+=b;
+        c. What is a-=b;
+        d. What is a==b;
+        d. What is a===b;
+        e. What is a>b;
+    */
+
+                 /*
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::JAVASCRIPT FUNCTIONS  :::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        Functions:
+        A function is a block of code that can be executed multiple times from different parts of your program
+        Functions are useful for performing a specific task, and they can be reused throughout your program
+        Functions can take arguments, which are values passed to the function when it is called
+        Functions can return values, which can be used by the code that called the function
+
+        */
+        // declarig a function - declare a function with the function key word followed by the function name
+        function greet(){
+            console.log('Hello World');
+        }
+        //executing or calling a function:
+        greet(); // self invocation
+        // using an HTML onlcick event on a button  -  got to HTML button above
+
+
+        // passing arguments to a function
+        function greetPerson(name){
+            console.log('Hello ' + name);
+        }
+        greet('Henry') // passing an argument Henry
+        greetPerson('John'); // passing an argument John
+
+        // return functions 
+        function add(a,b){
+            return a+b;
+            }
+        num2 = add(12,12) // function that return values can be assigned to variables as values 
+        console.log(num2); // returns 24
+        console.log(add(3,4)); // returns 7
+        // Creating a function that returns a strin into a given HTML elt
+        function rbt(elt, text){
+            container  = document.querySelector(elt)
+            container.textContent = text;
+
+        }
+        rbt('#text1','anoter text')
+        rbt('#text2','New Line of Text')
+
+        /*
+        ::::::::::::::::::::::::::::::::::::::::::
+        :::: EXERCISE ::::::::::::::::::::::::::::
+        ::::::::::::::::::::::::::::::::::::::::::
+        */
+       //1. Create a program  that takes an HTML element and changes its content 
+       //2. Create a program that takes a month number and converts it into a month string
+       //3. Create a program that takes a month day and returns a day string
+       //4. Create a program that takes a value from an input element and returns the value in another text element
+
+    </script>
+</body>
+</html>
+<script>
+    function greeting(){
+        let text = 'Hello!'
+        document.getElementById('text2').innerHTML = text
+    }
+</script>
+
+<button onclick="greeting()"> click me </button>

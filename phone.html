@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin:0;
+        }
+        .form{
+            --green:rgb(20, 143, 20);
+            background-color: rgb(20,143,20,.3);
+            padding: 6px;
+            border-radius: 8px;
+            width: 95%;
+            height:80%;
+            margin: auto;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            /* justify-content: space-around; */
+            box-shadow: 0px 0px 3px  rgba(0,0,0,.7);
+            margin-top: 10%;
+        }
+        .form input,.form button{
+            padding: 22px;
+            width: 100%;
+            background-color: var(--green);
+            border:1px solid rgb(36, 171, 36);
+            outline: 0;
+            box-shadow: 0px 0px 3px rgba(0,0,0,.7);
+            margin-top: 8px;
+            border-radius: 4px;
+            color: aliceblue;
+            font-weight: 700;
+            text-align: center;
+            margin-top:22px;
+        }
+        input::placeholder{
+            color: aliceblue;
+        }
+
+        .form input:hover,.form button:hover{
+            transform: rotate(-3deg);
+            margin-bottom:10px;
+            background:linear-gradient(to bottom right, var(--green),green,rgb(36, 171, 36));
+        }
+        input:focus{
+            animation:rad 1s linear;
+            transform: rotate(-3deg);
+        }
+        @keyframes rad {
+            0%{
+                width: 100%;
+            }
+            50%{
+                width: 30%;
+            }
+            100%{
+                width: 100%;
+            }
+            
+        }
+    </style>
+    <style>
+        .phone{
+            margin: auto;
+            width: 100%;
+            height: 500px;
+            background-image: url(../traceMKT/imgs/nur.webp);
+            background-position: center;
+            background-size: cover;
+            border-radius: 22px;
+            box-shadow: 0px 0px 4px 1px rgb(0,0,0,.1) inset;
+            /* border:4px solid gray */
+        }
+        .top{
+            background-color: rgb(0,0,0,0.8);
+            background-color:rgb(128,128,128,.8);
+            width: 140px;
+            height: 30px;
+            border-radius: 0px 0px 16px 16px;
+            margin:auto;
+            display: flex;
+            justify-content:space-between;
+            padding:3px;
+            padding-top:4px;
+        }
+        .case{
+            padding:6px;
+            background:linear-gradient(to bottom right, black,gray,dark);
+            box-shadow:0px 0px 12px 1px inset;
+            width:300px;
+            margin:auto;
+            margin-top:40px;
+            border-radius: 22px;
+        }
+        .bottom-line{
+            background:#808080;
+            padding:3px;
+            margin:auto;
+            width:180px;
+            border-radius:12px;
+            margin-top:30px;
+        }
+      .sound,.sense,.cam{
+        padding:5px;
+        margin:auto;
+        width:100%;
+        background:rgb(128,128,128);
+        border-radius:4px;
+      }
+      .sense,.cam{
+        padding:3px;
+        margin:auto;
+        width:15px;
+        height:15px;
+        border-radius:50%;
+        margin:2px;
+      }
+      .cam{
+        background-color:rgb(100,128,128);
+        border:4px solid #808080;
+      }
+      button{
+        cursor:progress;
+      }
+    </style>
+</head>
+<body>
+    <div class='case'>
+        <div class="top-nip"></div>
+        <div class="phone">
+            <div class="top">
+                <div class='cam'></div>
+                <div class='sound'></div>
+                <div class='sense'></div>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="userid">
+                <input type="text" placeholder="passcode">
+                <button type="button"> Go</button>
+            </div>
+            <div class='bottom-line'></div>
+        </div>
+    </div>
+
+</body>
+</html>

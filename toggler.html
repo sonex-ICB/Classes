@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle{
+            width: 70px;
+            padding: 5px;
+            background-color: aliceblue;
+            cursor: pointer;
+            border: 1px solid rgb(128,128,128,.2);
+            border-radius:18px;
+
+        }
+        .indicator{
+            background-color: gray;
+            height: 15px;
+            width: 50%;
+            translate:0;
+            transition:.8s;
+            border-radius:18px;
+        }
+        .active{
+            background-color: aliceblue;
+            transform: translate(100%);
+        }
+        .inactive{
+            background-color: gray;
+            transform: translate(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle"> 
+        <div class="indicator"></div>
+    </div>
+</body>
+<script>
+    toggle = document.querySelector('.toggle')
+    indicator = document.querySelector('.indicator')
+    state = '0';
+    toggle.addEventListener('click',()=>{
+        if(state=='0'){
+            indicator.classList.remove('inactive');
+            indicator.classList.add('active');
+            toggle.style.background='blue';
+            state='1'
+        }else{
+            indicator.classList.remove('active');
+            indicator.classList.add('inactive');
+            
+            toggle.style.background='aliceblue';
+            state='0';
+        }
+    })
+</script>
+</html>
+
+
+<!-- 
+    output 
+    variables 
+    data types 
+    function 
+
+    launch  - run
+
+-->

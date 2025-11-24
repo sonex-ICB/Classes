@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"></p>
+</body>
+<script>
+    // JavaScript output
+    // Using Console
+     console.log("Hello World!");
+    //  using alert window
+    alert("JavaScript is awesome");
+    // using an html elt
+    // create an html elt and assign an id to it 'text';
+    document.getElementById('text').innerHTML = 'Hello world';
+    // writing into the HTML output
+    document.write('Am learning  JS');
+    /* The output streams enables programmers to output content to a web page
+        the use of console .log() method sends information to the browser's console 
+        which is good for development and testing and debuging but not for production or client side;
+         while the document.write() method writes directly to the webpage itself 
+         -  this method is also best for testing as it can write a whole new content in a web page 
+         if used improperly, it will clear all existing elements on that page.
+         We should use an alert widow or an HTML elt to write content in a webapge
+    */
+    // comments - this is a comment, it will not be executed
+    // Comments are used to make notes 
+    // They do nothing when the script runs and can be used to disable code
+    // console.log('JavaScript code text here!'); - this line will not run
+    // variables -  are data containers
+    // variables are created with the let, const, and var key word followed by the variable name
+    let name = 'Mark Henry';
+    // let is the key word, name is the variable containing data Mark Henry
+    // we can make reference to Mark Henry using name
+    console.log(name); // this will  print Mark Henry to the console
+    const country = 'Nigeria';
+    var number = '08074810067';
+    var n1 = 1234567890;
+
+    /* variable names can be any names but not 
+         1. Key words or functions - like var, function, console
+         2. Start with a number  - like let 12th
+         variables are case sensitive - name, Name, NAME are three different variables
+    */
+    var x = 5;
+    var y = 6;
+    var z = x + y;
+    /*
+        x stores the value 5
+        y stores the value 6
+        z stores the value 11
+
+    */
+   /*
+        ***When to Use var, let, or const ::::::::::::
+        1. Always declare variables
+        2. Always use const if the value should not be changed
+        3. Always use const if the type should not be changed (Arrays and Objects)
+        4. Only use let if you can't use const
+        5. Only use var if you MUST support old browsers.
+   */
+    //   You can declare many variables in one statement.
+   let person = "John Doe", carName = "Volvo", price = 200;
+    // **NOTE:::
+    // You  cannot redeclare variables    // 
+
+
+    // Operators::: Operators are symbols or key words  that perform an action on one or more values.
+    // arithmetic: + - * / %
+    // Addition operator : +
+        n1 = 12+4 
+        console.log("Addition of two numbers "+n1);
+        
+        // Subtraction operator : -
+        n2 = 12-4 
+        console.log("Subtraction of two numbers "+n2);
+        
+        // Multiplication operator : *
+        n3 = 12*4
+        console.log("Subtraction of two numbers "+n3);
+
+        // Modulo operator : % - returns the remainder of an fraction
+        n4 = 13%4 // n4 = 1
+        console.log("Modulo operation "+n4);
+    
+    // assignment: += -= *= /= %= 
+        // Addition Assignent: x+=y;
+        x = 12;
+        y = 4;
+        x+=y; //x = x+y 16
+        
+        console.log(x);
+
+        // Subtraction Assignent: x-=y;
+        x = 12;
+        y = 4;
+        x-=y; //x = x-y 8
+        console.log(x);
+    // comparison operators: >,<,==,===,
+    //Logical Operatos: !, &&, ||
+
+</script>
+</html>

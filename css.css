@@ -1,0 +1,44 @@
+:root{
+    --a:rgb(255, 255, 255);
+    --b:yellow;
+    --c:blue;
+    --fs1:10px;
+    --fs2:14px;
+    --fs3:18px;
+    --w1:40%;
+}
+body{
+    background-color: var(--a);
+    
+}
+div div{
+     background-color: var(--b);
+     padding: var(--fs3);
+     margin: var(--fs1);
+}
+.div{
+    display:flex;
+    flex-direction: row;
+    background-color:orange;
+    justify-content: space-around;
+    align-items: center; 
+}
+.relative{
+    position:relative;
+    top:300px;
+}
+.abs{
+    position:absolute;
+    top:300px;
+}
+.fixed{
+    position:fixed;
+    bottom:0px;
+    right:0;
+    z-index: -10;
+}
+.sticky{
+    background-color: red;
+    position: sticky;
+    top:10px;
+}

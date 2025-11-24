@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <a href="class 3.html"><button>PREV CLASS</button></a>
+        <a href="class 5.html"><button>NEXT CLASS</button></a>
+    </p>
+    <!-- CLASS 4 CSS -->
+    <!-- CSS - cascading Stylesheet; A language used to struture websites
+        CSS is added to HTML; it works together with HTML.
+        CSS can be external and Internal
+        External CSS is created in an external file and linked to the HTML file;
+        External CSS allows one CSS file to be used accross many HTML files
+        Internal CSS is added to the HTML file in the head section using the <style> tag
+        CSS Syntax: Unlike HTML; css selects the HTML element to be styled before applying the tyles 
+        CSS files are saved with .css extension
+        To use CSS you must have knowledge of HTML
+    -->
+    <!-- Getting Started: Internal CSS -->
+    <style>
+        /* CSS goes here */
+    </style>
+    <!-- External CSS -->
+    <link rel="Stylesheet" href="mycss1.css" />
+    <!-- styling elements -->
+    <style>
+        /* CSS goes here,
+        p: points to every paragraph tag in this HTML doc
+        {} opens and close the code blocks for the elt in selection
+        the CSS rulse written within {} affects only the selected elt 
+        */
+        p{color:red}
+    </style>
+    <p >This text is styled red using CSS</p>
+    <p>This text is also styled red using CSS</p>
+    <!-- CSS uses properties and values to style elts; 
+        The property is attached to the value by means of colon(:)
+        The whole property and value seperated by a semi-colon(;)
+        property:value;
+    -->
+    <style>
+        /* using class attr to style elts
+        instead of using the tagname, use the classname and prefix a dot (.) 
+        */
+        .myDiv{color:red;background-color: blueviolet;}
+    </style>
+    <div class="myDiv">This div belong to a "myDiv" Class</div>
+    <div class="myDiv">This div also  belong to a "myDiv" Class</div>
+    <div class="myDiv">This div also belong to a "myDiv" Class</div>
+    
+    <!--   using id attr to style elts
+            instead of using the tagname, use the id and prefix a dot (#) 
+        -->
+    <style>
+        #div1{color:blueviolet;background-color: red;}
+        #div2{color:red;background-color: black;}
+        #div3{color:gray;background-color: green;}
+    </style>
+    <div id="div1">This div has an id "div1"</div>
+    <div id="div2">This div has an id "div2"</div>
+    <div id="div3">This div has an id "div3"</div>
+    <!-- NOTE: classes and Ids are case sensitive -->
+    <!-- CSS colors and backgronds     -->
+    <style>
+        /* text colors */
+        .div1{
+            color: orange;
+        }
+        .div2{
+            color: rgb(255,255, 0);
+        }
+        .div3{
+            color: #80ad;
+        }
+        /*  backgrounds: ignore the padding property*/
+        .bg1{
+            background-color: rgb(5,5, 255);
+            color:aliceblue;
+            padding: 12px;
+        }
+        .bg2{
+            /* gradient uses multiple backgrounds */
+            background: linear-gradient(tomato,green,blue,yellow,black);
+            color:aliceblue;
+            padding: 50px;
+        }
+        .bg3{
+            background-image: url(images/img1.png);
+            padding: 50px;
+            color:aliceblue;
+        }
+        
+    </style>
+       <h1>CSS Colors</h1>
+       <h4>Text Colors </h4>
+       <div class="div1">Predefined color names: orange</div>
+       <div class="div2"> RGB values rgb(12,12,12)</div>
+       <div class="div3">Hex values </div>
+       <h4>Backgrounds</h4>
+       <div class="bg1">Solid color background</div>
+       <div class="bg2"> Gradient Background</div>
+       <div class="bg3">Image background</div>
+    <a href="css_colors.html"> <button>CSS colors</button> </a>
+    <!-- CSS Margins and Padding -->
+    <style>
+        /* 
+        Margin: creates space outside an elt
+        Padding: creates space inside an elt
+        */
+        .m1{
+            /* margin property is unversal and affects all sides of the elt */
+            margin:30px;
+            background-color: aquamarine;
+        }
+        .ml{
+            margin-left:30px;
+            background-color: aquamarine;
+        }
+        .mt{
+            margin-top:30px;
+            background-color: aquamarine;
+        }
+        /* Padding: padding property is unversal and affects all sides of the elt */
+        .p1{
+            padding: 40px;
+            background-color: aquamarine;
+            margin:1px
+        }
+        .pl{
+            padding-left: 40px;
+            background-color: aquamarine;
+            margin:1px
+        }
+        .pt{
+            padding-top: 40px;
+            background-color: aquamarine;
+            margin:1px
+        }
+    </style>
+    <div class="m1"> universal margin</div>
+    <div class="ml"> Margin Left: Space outside on the left</div>
+    <div class="mt"> Margin Top: Space outside on top of an elt</div>
+    <div class="p1">Universal padding property; Create space inside an elt</div>
+    <div class="pl">Padding left: Space on the left</div>
+    <div class="pt">Padding Top: Space on top</div>
+    <!-- widths and height -->
+    <style>
+        /* the width and height property is used to specify the size of an elt */
+        .w1{
+            /* a square */
+            width: 450px;
+            height: 450px;
+            background-color: tomato;
+        }
+        .w2{
+            width: 100%;
+            height: 150px;
+            background-color: blueviolet;
+        }
+    </style>
+    <div class="w1">Same height and width results to a square</div>
+    <div class="w2"> differed height and width</div>
+    <!-- units of measurement -->
+    <style>
+        /* 
+        use px for smaller values 
+        use rem for higher values
+        use percentage % for relative values
+        */
+        .px{
+            /* same as 2rem */
+            width: 32px;
+            height: 32px;
+            background-color: blanchedalmond;
+        }
+        .rem{
+            /* same as 32px */
+            width:2rem;
+            height: 2rem;
+            background-color: azure;
+        }
+        .per{
+            /* relative to the screen size */
+            width: 60%;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <div class="px"></div>
+    <div class="rem"></div>
+    <div class="per"></div>
+
+    <!-- CSS borders -->
+    <style>
+        .bdr1{
+            border-width: 4px;
+            border-style: solid;
+            border-color: blue;
+            padding: 30px;
+
+        }
+        /* border shorthand - the above line can be shortened */
+        .bdr2{
+            border:4px solid blue;
+            margin-top: 4px;
+            padding: 30px;
+
+        }
+        /* unique borders */
+        .bdr3{
+            border:3px solid blue;
+            border-right: 4px solid orange;
+            border-bottom: 5px solid aquamarine;
+            border-left: 6px solid black;
+            margin-top: 4px;
+            padding: 30px;
+
+
+        }
+        /* border types: solid, dotted, inset, ridge */
+        .bdr4{
+            border:10px ridge orange;
+            margin-top: 4px;
+            padding: 30px;
+
+
+        }
+    </style>
+    <div class="bdr1"> CSS border property</div>
+    <div class="bdr2"> CSS border shorthand</div>
+    <div class="bdr3"> CSS unique borders</div>
+    <div class="bdr4"> CSS ridge border</div>
+<!-- working with text -->
+    <style>
+        .text1{
+            font-size: 13px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            letter-spacing: 12px;
+            line-height: 40px;
+            text-align: center;
+            /* text-align: center, right, left and ustify */
+        }
+    </style>
+    <div class="text1">Hello <br>world</div>
+    <!-- using web fonts: insert a link to the link you want to make use of -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Honk">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+        .sofia{
+            font-family: "sofia";
+            padding: 30px;
+            color:#fff;
+            background-color: tomato;
+        }
+        .audiowide{
+            font-family: "audiowide";
+            padding: 30px;
+            color:#fff;
+            background-color: tomato;
+        }
+    </style>
+    <div class="sofia">This is a google font; Sofia</div>
+    <div class="audiowide">This is a google font; Audiowide</div>
+    <!-- Working with tables -->
+    <style>
+        /* Plain table */
+        .table1{
+            width: 100%;
+            border:1px solid black;
+            text-align: left;
+            border-collapse: collapse;
+            margin-top: 5px;
+        }
+        .table1 td, .table1 th{
+            padding: 15px;
+        }
+        .table1 tr{border:1px solid black;}
+        /* adding background */
+        .table_bg{
+            background-color: blue;
+            border: 0;
+            color:antiquewhite;
+        }
+        /* table with strips */
+        .table_stripped{
+            background-color: blueviolet;
+        }
+        .table_stripped tr:nth-child(even){
+            background-color:blue;
+        }
+        /* adding hover effect */
+        .table_stripped tr:hover{
+            background-color:rgb(27, 27, 210);
+        }
+
+    </style>
+    <h5>Plain Table</h5>
+    <table class="table1">
+        <tr>
+            <th>S/N</th>
+            <th>Customer Name</th>
+            <th>Customer ID</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Henry Ford</td>
+            <td>0234</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Singah Paul</td>
+            <td>0214</td>
+        </tr><tr>
+            <td>3</td>
+            <td>Donald Terry</td>
+            <td>0284</td>
+        </tr>
+    </table>
+    <h5>table with background </h5>
+    <table class="table1 table_bg">
+        <tr>
+            <th>S/N</th>
+            <th>Customer Name</th>
+            <th>Customer ID</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Henry Ford</td>
+            <td>0234</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Singah Paul</td>
+            <td>0214</td>
+        </tr><tr>
+            <td>3</td>
+            <td>Donald Terry</td>
+            <td>0284</td>
+        </tr>
+    </table>
+    <h5>Stripped Background  and hovers</h5>
+    <table class="table1 table_stripped">
+        <tr>
+            <th>S/N</th>
+            <th>Customer Name</th>
+            <th>Customer ID</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Henry Ford</td>
+            <td>0234</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Singah Paul</td>
+            <td>0214</td>
+        </tr><tr>
+            <td>3</td>
+            <td>Donald Terry</td>
+            <td>0284</td>
+        </tr>
+    </table>
+    <!-- CSS display property
+        use:
+        display: block -  Displays an element as a block element;
+        display: inline - Displays an element as an inline element;
+        display: none - hide an element;
+        display: flex - Displays an element as a block-level flex container;
+
+    -->
+    <style>
+        .block{
+            /* this is an inline element but displayed as block */
+            display: block;
+            padding: 8px;
+            background-color:tomato;
+        }
+        .inline{
+            /* this is an block element but displayed as inline */
+            display: inline;
+            padding: 8px;
+            background-color: orange;
+            /* inline elements dont have css width or height */
+            width: 100%;
+            height: 200px;
+        }
+        .display_none{
+            /* this elt will not show because its displayed as none */
+            display: none;
+            padding: 8px;
+            background-color: aquamarine;
+        }
+        
+    </style>
+    <div class="inline">This is a div, a block element but displayed as inline</div>
+    <div class="inline">This is a div, a block element but displayed as inline</div>
+    <span class="block">This is a span, an inline element but displayed as block</span>
+    <span class="block">This is a span, an inline  element but displayed as inline</span>
+</body>
+</html>

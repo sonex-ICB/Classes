@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;padding:0;margin: 0;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        :root{
+            --col:rgb(18, 17, 17);
+        }
+        body{
+            background-color: var(--col)
+        }
+        aside{
+            position: static;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            padding-top: 2rem;
+            background-color:aliceblue;
+            overflow: auto;
+        }
+        .src input{
+            width: 100%;
+            border:0;
+            outline: 0;
+            padding: 10px;
+            background-color:var(--col);
+            color: aliceblue;
+        }
+        .src{
+                position: absolute;
+                top:0;
+                width: 100%
+            }
+        aside a{
+            text-decoration: none;
+            color: var(--col);
+            padding:20px;
+            display: block;
+            transition: .5s;
+        }
+        aside a:hover {
+            background-color: var(--col);
+            color: #fff;
+            font-weight: 700;
+        }
+        main{
+            color:#fff;
+            padding-left: 12px;
+        }
+        main h3{
+            font-size: 32px;
+        }
+
+        @media screen and (min-width:450px){
+            aside{
+                position: fixed;
+                display: block;
+                width: 20%;
+                background-color: aliceblue;
+            }
+            main{
+                width: 80%;
+                margin-left:20%;
+                padding: 4px;
+            }
+            .src{
+                position: static;
+            }
+        }
+        /* Hide scroll bar */
+        ::-webkit-scrollbar{
+            background-color: var(--col);
+        }
+        
+    </style>
+</head>
+<body onscroll="scroller()">
+    <aside>
+        <div class="src">
+            <input placeholder="Search" onkeyup="findLink(this.value)" />
+        </div>
+        <div class="links"> <a href="#html" >HTML</a> </div>
+        <div class="links"> <a href="#css" >CSS</a> </div>
+        <div class="links"> <a href="#b5">BOOTSTRAP</a> </div>
+        <div class="links"> <a href="#script">SCRIPT</a> </div>
+        <div class="links"> <a href="#py">PYTHON</a> </div>
+        <div class="links"> <a href="#php">PHP</a> </div>
+        <div class="links"> <a href="#cpp">C++</a> </div>
+    </aside>
+    <main>
+        <h3>Responsive Sidebar Example</h3>
+        <p>This example use media queries to transform the sidebar to a top 
+        navigation bar when the screen size is 450px or less.</p>
+        <p>We have also added a media query for screens that are 400px or less, 
+            which will vertically stack and center the navigation links.</p>
+        <h5>Resize the browser window to see the effect.</h5>
+        <br>
+        <div id="html">
+            <h2>HTML</h2>
+            <p>HTML is the standard markup language for Web pages.
+                <br>With HTML you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                HTML is easy to learn - You will enjoy it!</p>
+        </div>
+        <!--  -->
+        <br>
+        <div id="css">
+            <h2>CSS</h2>
+            <p>CSS is the language we use to style an HTML document.
+                <br>CSS describes how HTML elements should be displayed.
+                <br>This tutorial will teach you CSS from basic to advanced.
+                <br>With CSS you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                CSS is easy to learn - You will enjoy it!</p>
+        </div>
+        <!--  -->
+        <br>
+        <div id="b5">
+            <h2>BOOTSTRAP</h2>
+            <p>BOOTSTRAP is the standard markup language for Web pages.
+                <br>With B5 you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                BOOTSTRAP is easy to learn - You will enjoy it!</p>
+        </div>
+        <!--  -->
+        <br>
+        <div id="script">
+            <h2>SCRIPT</h2>
+            <p>HTML is the standard markup language for Web pages.
+                <br>With HTML you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                SCRIPT is easy to learn - You will enjoy it!</p>
+        </div>
+        <!--  -->
+        <br>
+        <div id="py">
+            <h2>PYTHON</h2>
+            <p>PYTHON is the standard markup language for Web pages.
+                <br>With PYTHON you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                PYTHON is easy to learn - You will enjoy it!</p>
+        </div>
+        <!--  -->
+        <br>
+        <div id="php">
+            <h2>PHP</h2>
+            <p>PHP is the standard markup language for Web pages.
+                <br>With PHP you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                PHP is easy to learn - You will enjoy it!</p>
+        </div>
+        <!--  -->
+        <br>
+        <div id="cpp">
+            <h2>C++</h2>
+            <p>C++ is the standard markup language for Web pages.
+                <br>With HTML you can create all types of web documents such a
+                <ul>
+                    <li> E-commerce website</li>
+                    <li> NGO/Coperate Websited</li>
+                    <li> Blogs/News</li>
+                    <li> Education/school</li>
+                </ul>
+                
+                C++ is easy to learn - You will enjoy it!</p>
+        </div>
+    </main>
+</body>
+<script>
+    links = document.querySelectorAll('a');
+    function scroller(){
+        let po = document.documentElement.scrollTop;
+        // html active tab
+        if(po<=250){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[0].style.background='black';
+            links[0].style.color='aliceblue';
+        }
+        // css active tab
+        if(po>250 && po<=450){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[1].style.background='black';
+            links[1].style.color='aliceblue';
+        }
+        // b5 active tab
+        if(po>450 && po<=650){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[2].style.background='black';
+            links[2].style.color='aliceblue';
+        }
+        // script active 
+        if(po>650 && po<=850){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[3].style.background='black';
+            links[3].style.color='aliceblue';
+        }
+        // py active 
+        if(po>850 && po<=1050){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[4].style.background='black';
+            links[4].style.color='aliceblue';
+        }
+        // php
+        if(po>1050 && po<=1250){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[5].style.background='black';
+            links[5].style.color='aliceblue';
+        }
+        //  c++
+        if(po>1250 && po<=1500){
+            for(i=0;i<links.length;i++){
+                links[i].style.background='aliceblue';
+                links[i].style.color='black';
+            }
+            links[1].style.background='black';
+            links[1].style.color='aliceblue';
+        }
+    }
+    // search function
+    function findLink(src){
+        src= src.toLowerCase();
+        if(src=='html' ||  src == 'htm'){
+            location='#html'
+        }
+        if(src=='css'||  src=='styling' || src=='style'){
+            location='#css'
+        }
+        if(src=='b5'||  src=='boot' || src=='bootstrap' ||src=='bootstrap 5'){
+            location='#b5'
+        }
+        if(src=='script'||  src=='js' || src=='jscript' ||src=='javascript'){
+            location='#script'
+        }
+        if(src=='py'||  src=='python'){
+            location='#py'
+        }
+        if(src=='php'){
+            location='#php'
+        }
+        if(src=='c++'|| src=='cpp'){
+            location='#c++'
+        }
+    }
+
+</script>
+</html>

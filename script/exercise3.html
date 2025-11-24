@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container p-4">
+        <p id="num"></p>
+        <button class="btn btn-warning btn-sm"
+        onclick="document.querySelector('#num').innerHTML = generateNumber()"
+        >Gen Phone Number</button>
+    </div>
+    <script>
+        generateNumber();
+        // creating an 11 digit phone number
+        function generateNumber(){
+            var num = Math.floor(Math.random() * (99999999));
+            return(`080${num}`);
+            // console.log(`080${num}`);
+        }
+    </script>
+    <!-- No 2 -->
+    <!-- Creating def display from first and last letter -->
+    <div class="container">
+        <input class="form-control form-control-sm" id="user" />
+        <div class="h2 p-3 bg-dark">
+            <div class="badge bg-light text-dark"></div>
+        </div>
+        <button class="btn btn-dark" onclick="displayDef()">DISPLAY</button>
+    </div>
+    <script>
+        function displayDef(){
+            user = document.querySelector('#user').value;
+            // user = 'Mark Henry';
+            fl = user.slice(0,1);
+            space = user.indexOf(' ');
+            ll = user.slice(space+1,space+2);
+            document.querySelector(`.badge`).textContent = `${fl}${ll}`;
+
+        }
+    </script>
+    <!-- No 3  -->
+    <!-- Radomely changing the bg of a box -->
+    <div class="container p-3">
+        <div class="dbox rounded border"  style='height:120px; width:120px'>
+        </div>
+        <div class="btn btn-primary m-2" 
+        onclick="changeColors()">Change Color</div>
+    </div>
+    <script>
+        let colors=['red','green','orange','aliceblue','brown','aqua','aquamarine','gray'];
+        elt = document.querySelector('.dbox');
+        function changeColors(){
+            colorValue = Math.floor(Math.random()*colors.length);
+            elt.style.background=colors[colorValue];
+        }
+    </script>
+    <!-- Using an input elt, take a number from a user,
+             if the number is <=18 display "Too young, Cannot vote"
+             if the number is >=18 "Can Vote"
+     -->
+     <div class="container">
+        <div class="bg-dark p-2">
+            <input type="text" class="form-control form-control-sm" id="val">
+        </div>
+        <div class="bg-secondary p-2">Output:
+            <span id="message"></span>
+        </div>
+        <div class="bg-dark p-3">
+            <button type="button" class="btn btn-light"
+            onclick="check()">Check</button>
+        </div>
+    </div>
+    <script>
+        function check(){
+            val = document.querySelector('#val').value;
+            if(val==''){
+                msg = 'Empty!';
+            }else{
+                if(val<18){
+                    msg = 'Too young cannot vote!';
+                }else{
+                    msg = 'Can Vote!';
+                }
+            }
+            document.querySelector('#message').innerHTML = msg;
+        }
+    </script>
+    <!-- Use real time to create a greeting text; -->
+    <div class="container">
+        <div class="bg-dark p-2 time">
+            <div class="">
+                <strong class="badge bg-danger text-light" id="time"></strong>
+            </div>
+        </div>
+    </div>
+    <script>
+        function greeting(){
+            myDate = new Date();
+            hrs,mins,secs = myDate.getSeconds();
+            mins = myDate.getMinutes();
+            hrs = myDate.getHours();
+            text =  `<div class='bg-dark p-2'>
+                        <strong> ${hrs}:${mins}:${secs} </strong>
+                    </div>
+                    <div class>Good Morning </div>`;
+
+        }
+    </script>
+</body>
+</html>

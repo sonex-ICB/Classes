@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="rim.png" />
+</head>
+<body>
+    <p>
+      <a href="class1.html"><button>PREV CLASS</button></a>
+      <a href="class 3.html"><button>NEXT CLASS</button></a>
+    </p>
+    <!-- Class 2  -->
+    <!-- ELement nesting: Elts can be made children and others parenths, putting elts inside other elts -->
+    <p>
+        <span>My Name is<b>Mark Henry</b></span>
+    </p>
+
+    <!-- HTML List -->
+    <!-- this is an unordered list; a list with bullet makers -->
+    <ul>
+        <li>Item 1 </li>
+        <li>Item 2 </li>
+        <li>Item 3 </li>
+        <li>Item 4 </li>
+    </ul>
+    <!-- controlling the makers in a list; use the style atrr -->
+    <ul style="list-style-type: none">
+        <!-- types: circle, disc, sqaure, none -->
+        <li>Item 1 </li>
+        <li>Item 2 </li>
+        <li>Item 3 </li>
+        <li>Item 4 </li>
+    </ul>
+    <!-- this is an ordered list; a list with number makers -->
+    <ol>
+        <li> Item 1</li>
+        <li> Item 2</li>
+        <li> Item 3</li>
+        <li> Item 4</li>
+    </ol>
+    <!-- controlling the numbers in an ordered list; add the type attr -->
+    <ol type="I">
+        <!-- types: A,a, I,a, 1 -->
+        <li> Item 1</li>
+        <li> Item 2</li>
+        <li> Item 3</li>
+        <li> Item 4</li>
+    </ol>
+    <!-- HTML tables -->
+    <!-- tables appears as plain until CSS is applied -->
+     <style>
+      table,td,th{
+        border: 1px solid blue;
+        border-collapse: collapse;
+      }
+     </style>
+    <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>Ernst Handel</td>
+          <td>Roland Mendel</td>
+          <td>Austria</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>Helen Bennett</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus Winecellars</td>
+          <td>Yoshi Tannamuri</td>
+          <td>Canada</td>
+        </tr>
+        <tr>
+          <td>Magazzini Alimentari Riuniti</td>
+          <td>Giovanni Rovelli</td>
+          <td>Italy</td>
+        </tr>
+    </table>
+    <!-- links -->
+    <a href="#">A broken Link Opens no page</a><br>
+    <a href="https:google.com" target="_blank">An external link, opened in a new tab</a><br>
+    <a href="page2.html">A Link Opens page 2 in the current tab</a> <br>
+    <a href="#">A broken Link Opens no page</a> <br>
+    <!-- setting a favicon: a favicon is an image displayed in the tab title of a web page  -->
+    <!-- this should be done inside the <head> tag -->
+
+    <link rel="icon" type="image/x-icon" href="images/img1.png" />
+    <link rel="icon" href="images/bg.jpg" type="image/x-icon">
+    <!-- classes and Ids -->
+    <!-- The HTML class attribute is used to specify a class for an HTML element.
+        Multiple HTML elements can share the same class. A class is used to group 
+        elements such that instead of referencing to their tags, the class is referenced instead
+    -->
+    <p class="myP">This paragraph belongs to a class</p>
+    <p class="myP">This paragraph also belongs to a class</p>
+    <p class="myP">This paragraph also belongs to a class</p>
+    <!--HTML Id: The HTML id attribute is used to specify a unique id for an HTML element.
+        You cannot have more than one element with the same id in an HTML document.
+        An Id is used to uniquely identify elements.
+    -->
+    <p id="p1"> This paragraph has a unique Id</p>
+    <p id="p2"> This paragraph has a unique Id</p>
+    <p id="p3"> This paragraph has a unique Id</p>
+    <!-- HTML entities -->
+    <p>hello world
+        &amp;
+        &gt;
+        &lt;
+        &copy;
+        &trade;
+        &nbsp;
+        &#8470;
+    </p>
+    <!-- file paths -->
+    <!-- when referencing to a file in same folder, write the filename -->
+    <a href="page2.html">Page 2 in same folder</a> <br>
+    <!-- when referencing to a file in the next folder, write the folder name followed by file name -->
+    <a href="foldername/page2.html">Page 2 in the next folder</a> <br>
+    <!-- when referencing to a file in a previous folder, use double dot followed by foldername and filename -->
+    <a href="../foldername/page 2.html">Page 2 in a previous folder</a> <br>
+    <!-- CLASS 3 -->
+    <!-- images -->
+    <img src="images/img1.png"  width="120px" />
+    <!-- src is an attr of img used to specify the address of the image to be opened 
+        while width specifies the horizontal size in px. it is a good practice to set 
+        the size of images by using the width attr 
+    -->
+
+
+    <img src="../Muna/muna/pix5.avif"  style="width:300px; max-width:100%">
+
+
+</body>
+</html>

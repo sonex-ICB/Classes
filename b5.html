@@ -1,0 +1,28 @@
+<select name="" id="my_states" onchange="my_func(this.value)">
+    <option value="">STATES </option>
+</select>
+<select name="" id="lga">
+    <option value="">LGA </option>
+</select>
+
+
+<script>
+    states  = [
+        "FCT",'KOGI'
+    ]
+    for(i=0;i<2;i++){
+        document.getElementById('my_states').innerHTML +=` <option>${states[i]} </option>`
+    }
+    function my_func(state){
+        if(state =='FCT'){
+            document.getElementById('lga').innerHTML =` <option>AMAC</option>`
+        }
+        else if(state =='KOGI'){
+            document.getElementById('lga').innerHTML =` <option>KOGI LGAs </option>`
+        }
+        else{
+            document.getElementById('lga').innerHTML =` <option>Other </option>`
+
+        }
+    }
+</script>

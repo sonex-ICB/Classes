@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            width: 100px;
+            height: 100px;
+        }
+        .box{
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            padding:20px;
+            margin: 3px;
+            /* font-size: 32px; */
+            text-align: center;
+            color:rgb(27, 6, 44);
+        }
+        .box:hover{
+            scale:1.1;
+            background-color: rgb(27, 6, 44);
+            color: #fff;
+            transition: .5s;
+        }
+        .cont{
+            display: flex;
+        }
+        .box1{
+            border-radius: 100% 4px 0px 4px;
+            box-shadow: 0px 0px 3px 1px rgb(225, 219, 219);
+        }
+        .box2{
+            border-radius: 4px 100% 4px 4px;
+            box-shadow: 0px 0px 3px 1px rgb(225, 219, 219);
+        }
+        .box3{
+            border-radius: 4px 4px 4px 100%;
+            box-shadow: 0px 0px 3px 1px rgb(225, 219, 219);
+        }
+        .box4{
+            border-radius: 4px 4px 100% 4px;
+            box-shadow: 0px 0px 3px 1px rgb(225, 219, 219);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cont">
+            <div class="box box1">
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="box box2">
+                <i class="fa-brands fa-square-whatsapp"></i>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="box box3">
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            <div class="box box4">
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <object data="" type=""></object> -->
+    <iframe src="" frameborder="0"></iframe>
+    <p>
+        <a href="class2.html"><button>PREV CLASS</button></a>
+        <a href="class 4.html"><button>NEXT CLASS</button></a>
+    </p>
+    <!-- CLASS 3 -->
+    <!-- HTML Media: adding media files to a webapge. The rules in file referencing still maintains -->
+    <!-- Images -->
+    <img src="images/img1.png"  width="120px" />
+    <!-- src is an attr of img used to specify the address of the image to be opened 
+        while width specifies the horizontal size in px. it is a good practice to set 
+        the size of images by using the width attr 
+    -->
+    <!-- Videos: Add controls if you want the video to have control buttons
+        Add muted if you want it play without sound
+        Add autoplay if you want it to start playing auto
+        Specify the width of the video using the width Attr
+     -->
+    <video controls autoplay muted width="400">
+        <source src="videos/vid1.mp4" type="video/mp4" />
+    </video>
+    <!-- Audio: Add controls if you want the video to have control buttons
+        Add muted if you want it play without sound
+     -->
+     <audio controls>
+        <source src="audio/audio1.mp3" type="audio/mp3" />
+     </audio>
+     <br>
+     <!-- Iframes: Iframes allows developers open a web page inside another webpage
+        use width to specify the size of the iframe
+    -->
+     <iframe src="page2.html" width="450px"></iframe>
+     <!-- You can use Iframes to play videos from youtube on your website -->
+     <!-- goto youtube get the video you want to play on your website,
+        click on share<embed>copy the code and paste it in your source code
+    -->
+    <!-- forms: these elements takes input from users on a website, 
+        The <form> specifies a form in a HTML document -->
+    <form action="server.php" method="POST">
+        <!-- simple login form -->
+        <input type="text" placeholder="username" name="username" id="username" />
+        <input type="password" placeholder="password" name="password" id="password" />
+        <input type="submit" value="Login" />
+    </form>
+   
+    <!-- In using the <input> tag, the type specifies the king of input and often affects the display -->
+    <p>Input type: Text <input type="text"></p>
+    <p>Input type: Number <input type="number"></p>
+    <p>Input type: Password <input type="password"></p>
+    <p>Input type: Email <input type="email"></p>
+    <p>Input type: Date <input type="date"></p>
+    <p>Input type: Search <input type="search"></p>
+    <p>Input type: Radio <input type="radio"></p>
+    <p>Input type: Checkbox <input type="checkbox"></p>
+    <p>Input type: Text <input type="text"></p>
+    <p>Input type: Button <input type="button" value="button"></p>
+    <p>Select:
+        <select name="" id="">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </p>
+
+    
+    <!-- There other types not listed here
+        The name attr is used to get the values from the distinct elts
+        The placeholder attr puts a shadow text to tell the user what kind of data to input
+    -->
+    <!-- Buttons -->
+    <button type="button">Button</button>
+    <button type="submit">Button</button>
+    <!-- Page layout and Sematics -->
+    <header>Defines a header for a document or a section</header>
+    <nav> Defines a set of navigation links</nav>
+    <section>Defines a section in a document</section>
+    <article>Defines an independent, self-contained content</article>
+    <aside>Defines content aside from the content (like a sidebar)</aside>
+    <footer>Defines a footer for a document or a section</footer>
+    <main>Defines the main content for a document</main>
+    <div>Tells nothing about its content. container</div>
+    <span>Tells nothing about its content.</span>
+    <label>Describes an input or object</label>
+    <p>Describe a paragraph text</p>
+    <form>Defines a form area in a web page</form>
+    <table>Defines a HTML table</table>
+    <p>Creates an<sup>indexed text</sup> </p> 
+    <p>Creates an<sub>subscribed text</sub> </p>
+    <textarea>Defines an area for large text input</textarea>
+    <!-- There are many html semantics and elts not discussed here -->
+</body>
+</html>

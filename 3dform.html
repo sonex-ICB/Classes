@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin:0;
+        }
+        .form{
+            --green:rgb(20, 143, 20);
+            background-color: var(--green);
+            padding: 6px;
+            border-radius: 8px;
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0px 0px 3px  rgba(0,0,0,.7);
+            margin-top: 10%;
+        }
+        .form input,.form button{
+            padding: 8px;
+            width: 100%;
+            background-color: var(--green);
+            border:1px solid rgb(36, 171, 36);
+            outline: 0;
+            box-shadow: 0px 0px 3px rgba(0,0,0,.7);
+            margin-top: 8px;
+            border-radius: 4px;
+            color: aliceblue;
+            font-weight: 700;
+            text-align: center;
+        }
+        input::placeholder{
+            color: aliceblue;
+        }
+
+        .form input:hover,.form button:hover{
+            transform: rotate(-3deg);
+            margin-bottom:10px;
+            background:linear-gradient(to bottom right, var(--green),green,rgb(36, 171, 36));
+        }
+        input:focus{
+            animation:rad 1s linear;
+            transform: rotate(-3deg);
+        }
+        @keyframes rad {
+            0%{
+                width: 100%;
+            }
+            50%{
+                width: 30%;
+            }
+            100%{
+                width: 100%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <input type="text" placeholder="userid">
+        <input type="text" placeholder="passcode">
+        <button type="button"> Go</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+h1{
+    color: var(--b);
+    background-color: var(--c);
+    font-size: var(--fs3);
+}
+h1{
+  padding: 30px;  
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+    </style>
+</head>
+<body>
+
+    <button onclick="closeWindow()"> close Window this window</button>
+    <button onclick="openWind()"> Open Window</button>
+    <button onclick="closeWind()"> Close External Opened window</button>
+    <div id="count"></div>
+    <p> <button type='button' onclick="window.location.href='https://google.com'">Javascript Links</button><p>
+</body>
+<script>
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::BROWSER OBJECT MODEL (BOM) ::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+
+// WINDOW OBJECT
+// All global JavaScript objects, functions, and variables automatically become members of the window object.
+// Global variables are properties of the window object.
+// Global functions are methods of the window object.
+window.document.write('Global window Object');
+// window height and width
+console.log('Width : '+window.innerWidth)
+console.log('Height : '+window.innerHeight)
+// screen height and width
+console.log(screen.width)
+console.log(screen.height)
+
+// close a window
+// window.close()
+function closeWindow(){
+    window.close(); // close the tab
+}
+// open a window
+// window.open(URL, name, specs, replace)
+// URL: The URL of the page to open in the new window.
+// name: The name of the window (optional).
+// specs: The features of the new window (optional).
+// replace: Specifies whether the URL should replace the current entry in the window's history or not (
+
+let myWindow;
+function openWind() {
+  myWindow = window.open("../", " New Window", "width=500,height=800");
+}
+
+function closeWind() {
+  myWindow.close();
+}
+// Interval and timeout
+// interval - keeps code execution until stopped
+let myInterval = window.setInterval(myTimer,300)
+count = 0;
+function myTimer(){
+    document.querySelector('#count').innerHTML = count
+    count+=1;
+
+} 
+// timeout - executes a code once after a given time
+// lets stop the above code after 5secs
+let myTimeout = window.setTimeout(clearTimer,1000*5);
+function clearTimer(){
+    window.clearInterval(myInterval);
+}
+// alert, confirm and prompt
+// alert - Pops a message for users
+window.alert('This is an alert!')
+// confirm - Pops a true or false dialogue box for users 
+let myConfirm = window.confirm('Do you want to leave this page?')
+// prompt  - Pops a dialogue box with default input to take text input from users 
+myPrompt = window.prompt('How old are you?')
+
+// history
+// length - number of urls in history
+document.write(`<p> ${window.history.length}<p>`) 
+    // back and forward  - both only works if there are previously visited urls
+document.write(`<p> <button type='button' onclick='${window.history.back()}'>Back</button><p>`) 
+document.write(`<p> <button type='button' onclick='${window.history.forward()}'>Forward</button><p>`) 
+   // page redirecting 
+    // check HTML button above - Javascript Links 
+
+
+  // window.location.href = 'https://www.google.com'
+  // window.location.replace('https://www.google.com')
+  // window.location.assign('https://www.google.com')  // same as href
+  // window.location.reload()  // reloads the current page
+  // navigator
+  // userAgent - returns the user agent string of the browser
+  document.write(`<p> ${navigator.userAgent}<p>`)
+ // platform - returns the platform of the browser
+ document.write(`<p> ${navigator.platform}<p>`)
+ // language - returns the language of the browser
+ document.write(`<p> ${navigator.language}<p>`)O
+</script>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <style>
+        .bg{
+            background: linear-gradient(to top right,red,black);
+            background-image: url(images/bg.jpg);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            animation: bg 0s linear infinite;
+            transition:4s;
+        }
+        @keyframes bg {
+            0%{
+                background: black;
+            }
+            50%{
+                background:rgb(103, 94, 94);
+            }
+            100%{
+                background: black;
+
+            }
+        }
+        .car{
+            transform: rotateY(180deg);
+            margin: auto;
+            margin-top: 10%;
+            display: block;
+        }
+        @keyframes car2 {
+            0%{
+                translate: 600px;
+            }
+            50%{
+                translate: 0px;
+
+            }
+            100%{
+                translate: 600px;
+
+            }
+            
+        }
+        .rim1{
+            position: absolute;
+            margin-top:-149.5px;
+            width: 60px;
+            margin-left:460px;
+
+
+        }
+        .rim2{
+            position: absolute;
+            margin-top:-149.5px;
+            width: 60px;
+            margin-left:702px;
+           
+
+        }
+        .rim1,.rim2{animation: car 0s linear infinite;}
+        @keyframes car {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg); 
+            }
+        }
+        .road{
+            display: flex;
+            position: fixed;
+            width: 100%;
+            top:355px;
+            transition: 3s;
+        }
+        .road div{
+            min-width:80px;
+            padding: 5px;
+            background-color: aliceblue;
+            margin-top: 10px;
+            margin-left: 40px;
+            max-height:10px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="btn btn-light position-absolute" onclick="drive()">DRIVE</button>
+    <div class="bg">
+        <img src="images/car.png" width="400px" class="car" />
+        <img src="images/rims.png" width="400px" class="rim1" />
+        <img src="images/rims.png" width="400px" class="rim2" />
+    </div>
+    <div class="road">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<script>
+    road = document.querySelector('.road');
+    pos = 0;
+    function drive(){
+        document.querySelector('.rim1').style.animation='car 1s linear infinite';
+        document.querySelector('.rim2').style.animation='car 1s linear infinite';
+        document.querySelector('.bg').style.animation='bg 8s linear infinite';
+            setInterval(()=>{
+            pos+=100;
+            currentPos ="-"+pos+'px';
+            road.style.translate= currentPos;
+            road.innerHTML += "<div></div> <div></div><div></div><div></div>";
+            // document.querySelector('.road').style.translate = currentPos;
+            // alert(pos)
+        },100)
+    }
+</script>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subscribe input, .subscribe button{
+            border:0; outline:0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id='div'></div>
+    
+</body>
+
+<script>
+    /*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::: STRING METHODS ::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    */
+    // string methods 
+    // concat method 
+    let str = "Hello World";
+    console.log(str.toUpperCase()); // HELLO WORLD
+    console.log(str.toLowerCase()); // hello world
+    firstName= "John "
+    lastName = 'Doe'
+    console.log(firstName.concat(lastName)); // John Doe
+    console.log(firstName+lastName); // John Doe
+    // Making arithmetic in a string 
+
+
+    // string length 
+    console.log(str.length); // 11
+
+    // slice method - extracts a part of a string returns the extracted part in a new string.
+    console.log(str.slice(0,5)); // Hello
+    // indexof - returns the position of the first occurence of a string
+    console.log(str.indexOf("World")); // 6
+    // string is an array of continuous characters 
+    console.log(str.charAt(0)); // H
+    console.log(str[1]); // H
+    // lastIndexof - last occurence of a string in a string
+    // replace 
+    let str2 = "Hello World, Hello Universe";
+    console.log(str2.replace("Hello", "Hi")); // Hi World, Hello Universe
+    console.log(str2.replace(/Hello/g, "Hi")); // Hi World, Hello Universe
+    // string methods = 
+    // trim - removes whitespace from both ends of a string
+    let str3 = "   Hello                       World   ";
+    console.log(str3.trim()); // Hello World
+    console.log(str3.trim().replace(/  /g, "")); // Hi World, Hello Universe
+    /*
+    :::::::::::::::::::::
+    :::: EXERCISE :::::::
+    :::::::::::::::::::::
+    1. Given a random user return 
+        a. The first 1/2 characters from  user
+        b. The last 1/2 characters from user
+        c. The first and last letter from user
+    2.  given 
+        person = "%John%Doe%"
+        a. Replace all the occurrence of % 
+        b. Add last name to person
+        c. Add Spapce before and after person
+    3. Create a programe that takes an input from a user 
+       a. converts the text to uppercase
+       b. removes whitespace
+     
+
+
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::: NUMBER AND MATH METHODS :::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    */
+    // number methods 
+    let num = 10.3454545;
+    console.log(num.toFixed()); // 10
+    console.log(num.toFixed(2)); // 10.35
+    //Math methods 
+    console.log(Math.PI); // 3.141592653589793
+    console.log(Math.ceil(10.2)); // 11 rounds up a number
+    console.log(Math.floor(10.8)); // 10 rounds down a number
+    console.log(Math.round(12.4)) //rounded to its nearest integer
+    console.log(Math.abs(-12.4)) //returns a positive number 
+
+    console.log(Math.sin(45)); // 0.8509035245341184
+    console.log(Math.cos(45)); // 0.5253219888177297
+    console.log(Math.max(12,45,23,56,4522,12,5)) // max value in 
+    console.log(Math.min(12,45,23,56,4522,12,5)) // min value in an array
+    console.log(Math.random()) // creates a random number
+    /*
+    :::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::EXERCISE::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::
+        1. Create a programe that calculates the Area of a Circle
+        2. Create a random password generator
+        3. Design a calculator 
+        4. Create a programe that randomly change the background of an element
+    */
+    /*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::ARRAY METHODS :::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    */
+    subjects = Array(); // Empty array
+    subjects.push('English','Maths','Physics') // add values to an array
+    console.log(subjects)
+    subjects.unshift('Biology') // Adding values at the beginning
+    subjects.push('Chemistry') // add in the end 
+    console.log(subjects) 
+    subjects.pop() // remove last item in an array;
+    console.log("Pop : "+subjects);
+    subjects.shift() // remove first item in an array;
+    console.log("Shift : "+subjects);
+    console.log(subjects)
+    // returning some parts of an array 
+    cars = ['Toyota','Honda','BMW','Audi','Benz','Volkswagen']
+    console.log(cars.slice(0,2).concat(cars.slice(4,cars.length)))
+    console.log(cars.sort()) // arrrane array values in ascending order
+    console.log(cars.reverse()) // reverse a sorted array
+    // converting a string to an array 
+    let courses = "HTML,CSS, PYTHON, PHP, JAVASCRIPT" 
+    str = " I Love Javascript"
+    str.split(' ')
+    strArr = ['i','love','javascript']
+
+    let coursesArray = courses.split(",") // creates each value after a comma(,)
+    console.log(coursesArray)
+    // converting an array to a string 
+    let colors = ["red", "blue", "green", "yellow"]
+    let colorsString = colors.join(" ") // string redbluegreenyellow
+    console.log('<br>')
+    console.log(colorsString)
+    // joining two arrays 
+    let fruits = ["apple", "banana", "orange"]
+    let vegetables = ["carrot", "broccoli", "spinach"]
+    let allFood = fruits.concat(vegetables) // array
+    let allFoodString = fruits.join(vegetables) // string
+    console.log(allFood) // array
+    console.log(allFoodString) // array
+
+    console.log(colors.slice(0,2)) // array
+    console.log(colors);
+    colors.push('orange','tomatoe'); // add values to an array
+    console.log(colors);
+    colors.shift('Purple') // add values at the beginning of an array
+    console.log(colors);
+    
+    console.log(colors.indexOf('red')) //0
+    console.log(colors.indexOf('aqua')) //-1
+    console.log(colors.includes('aqua')) // linke indexof but returns a boolean  - false
+    console.log(colors.includes('red')) //false
+    // changing array values 
+    colors[0] = 'aqua'
+    console.log(colors)
+    colors[1] = '' // empty values 
+    console.log(colors)
+    // max and min values in an array 
+    numbers = [2,3,4,6,7,8,9]
+    console.log(Math.max(numbers))
+    console.log(Math.min(...numbers))
+    
+    /*
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::EXERCISE::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        1. Create a programe that takes an item from a user and add it to an existing list
+        2. Given an array of numbers find the difference between the max and min values
+        3. Given a string BMW, Toyota,Honda; 
+            a. Convert the string to an array
+            b. Add Benz and Volkswagen to the array
+            c. Change all the values in the array
+            d. Empty all the values in the array
+
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::OBJECT METHODS ::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+*/
+    let person = {} // empty object
+        person.name = 'Solomon'
+        person.phone = '080877673'
+        person.course = "front End"
+    console.log(person)
+    // changing object values 
+    person.course = 'backend'
+    console.log(person)
+    // returning an object string using Json
+    console.log(JSON.stringify(person))
+    // converting an obbject string into an object 
+    user = '{"name":"solomon"}'; // Json data must be written in doble quotes 
+    // user = "{'name':'solomon'}"; // Json data must be written in doble quotes 
+    console.log(user) // string
+    console.log(JSON.parse(user)) // object
+    // convert object to string 
+    console.log(JSON.stringify(person)) // string
+    // return all object keys 
+    // Keys = Object.keys(person)
+
+    console.log(Object.keys(person)) // array 
+    console.log(Object.values(person)) // array 
+    console.log(Object.entries(person)) // array 
+    console.log(person.hasOwnProperty('person')) // bool - false 
+    console.log(person.hasOwnProperty('name')) // bool - true
+    // Object methods - functions defined in an object are called methods
+    person = {
+        'first_name':"Solomon",
+        'last_name':"Sonex",
+        'title':"Mr",
+        fullName:     
+        function(){
+            return `${this.title} ${this.first_name} ${this.last_name}`
+        }
+    } 
+    
+console.log(person.fullName());
+trimAll = {
+    'trim':function(x){
+        return x.replace(/  /g,'')
+    }
+}
+str = ('                Hello             world               ')
+console.log(str.replace(/  /g,''))
+console.log(trimAll.trim(str))
+// Object destructuring
+let  {first_name,last_name} = person
+console.log(first_name,last_name)
+// Object destructuring with default values
+ let {age = 25} = person
+console.log(first_name,last_name,age)
+/*
+::::::::::::::::::::::::::::::::::
+::::::EXERCISE :::::::::::::::::::
+::::::::::::::::::::::::::::::::::
+1. using a single statment perform this actions on the string ' hello World! '
+    a. return the length 
+    b. convert to uppercase
+    c. remove whitespace
+    d. Add the text "Text Formated :" to the text
+        sample :: Text Formated : Length = 12; HELLO WORLD
+2. Define a custome method that can perfom the same action as above using a given text
+3. Give the string '{"name":"Solomon","phone":"0986654"}'
+    a. return details as a method of the object
+
+*/
+</script>
+</html>

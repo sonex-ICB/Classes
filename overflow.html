@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+        }
+        .container{
+            width: 60%;
+            height: 300px;
+            box-shadow:0px 3px 2px gray;
+            margin:auto;
+            overflow: auto;
+            padding: 12px;
+            margin-top: 6rem;
+        }
+        table{
+            width:100%;
+            background-color: blanchedalmond;
+            text-align: left;
+            border-collapse: collapse;
+            cursor: pointer;
+        }
+        tr:nth-child(even){
+            background-color: bisque;
+            border:1px solid bisque;
+        }
+        tr:hover{
+            font-weight: 700;
+        }
+        td,th{
+            padding: 12px;
+        }
+        th{
+            background-color: black;
+            color:#fff;
+            margin:0;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- creating a zebra strips table with  hover effect -->
+    <div class="container">
+        <table>
+            <tr>
+                <!-- column labels or head -->
+                <th>S/no</th>
+                <th>Customer Name</th>
+                <th>Customer ID</th>
+                <th>Order ID</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>Mark Henry</td>
+                <td>058601</td>
+                <td>0343</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Linda Rose</td>
+                <td>456743</td>
+                <td>0243</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Mabel Hannah</td>
+                <td>058681</td>
+                <td>0344</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>SoniaHenry</td>
+                <td>058671</td>
+                <td>0643</td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Matthew Dinah</td>
+                <td>058633</td>
+                <td>0333</td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>Luke Dane</td>
+                <td>058611</td>
+                <td>1143</td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>Sam Blaze</td>
+                <td>058632</td>
+                <td>0363</td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>Tony Larry</td>
+                <td>058232</td>
+                <td>1363</td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>Luke Dane</td>
+                <td>058611</td>
+                <td>1143</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Sam Blaze</td>
+                <td>058632</td>
+                <td>0363</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Tony Larry</td>
+                <td>058232</td>
+                <td>1363</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Tony Larry</td>
+                <td>058232</td>
+                <td>1363</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

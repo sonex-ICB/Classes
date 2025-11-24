@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input name="user"/>
+        <input name="pass" />
+        <button type="submit">Submit</button>
+    </form>
+    <p>Hello world</p>
+    <p>Am learning Scrip</p>
+    <p>Script is awesome</p>
+
+    <div id="div1"> DOM</div>
+    <img src="" width="30"/>
+    <button id="btn">Submit</button>
+    <input type="text" id="input"/>
+    <!-- DOM - document obect model -->
+    <script>
+        document.getElementById('div1').style.background = 'red';
+        document.querySelector('img').src='../images/img1.png';
+        document.querySelector('#btn').onclick=function(){
+            // alert(); 
+            document.querySelector('#input').type = 'password';
+        }
+       let p =  document.querySelectorAll('p');
+       p[0].style.color = 'red';
+       console.log(p);
+    //    console.log(w)
+    p[1].innerHTML += "<h1>New Text </h1>"; 
+    document.getElementById
+    let h1 = document.createElement('h1');
+    h1.innerHTML = 'New Text';
+    p[2].appendChild(h1);
+    // location='https://google.com';
+    // alert(location);
+    alert(document.location);
+    // document.location = 'gg.com';
+    console.log(document.all)
+    // son  -script obect notation
+    log = {
+        'user':'admin',
+        'pass':'1234'
+    }
+    log2 = JSON.stringify(log);
+    log3 = JSON.parse(log2);
+    console.log(log3);
+    xhttps = new XMLHttpRequest();
+    xhttps.onreadystatechange = function(){
+        if(this.readyState=='4'&&this.status=='200'){
+            console.log(this.responseText);
+        }
+    }
+    xhttps.open('GET','data.php?log='+log3,true);
+    xhttps.send();
+    </script>
+</body>
+<!-- son_decode
+
+-->
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="text1" class="container p-2 my-3 bg-light shadow"></div>
+    <div id="text2" class="container p-2 my-3 bg-light shadow"></div>
+    <div  class="container p-2 my-3 bg-light shadow">
+        <select  id="" class="form-control">
+            <option> Years</option>
+        </select>
+    </div>
+    <div  class="container p-2 my-3 bg-light shadow">
+        <ul id="list"></ul>
+    </div>
+    <div  class="container p-2 my-3 bg-light shadow">
+        <ol id="list2"></ol>
+    </div>
+    <div  class="container p-2 my-3 bg-light shadow">
+        <div id="text3"></div>
+    </div>
+    <!--  -->
+    <div  class="container p-2 my-3 bg-light shadow">
+        <div id="text4"></div>
+    </div>
+    <div  class="container p-2 my-3 bg-light shadow" id="text5"></div>
+    <div  class="container p-2 my-3 bg-light shadow" id="text6"></div>
+    <div  class="container p-2 my-3 bg-light shadow" id="text7"></div>
+    <div  class="container p-2 my-3 bg-light shadow" id="text8"> AJAX response : </div>
+</body>
+<script>
+    /*
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::LOOPS :::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    loops: Task repittion 
+    types: 
+        1. for
+        2. while
+        3. do while
+        
+    
+    */
+   // For loop structure
+    // for(initialization, condition, increment/decrement){
+    //     // code goes here
+    // }
+
+    // example: using loop to write numbers 100 - 300
+    text = ''
+    for(n=100;n<=300;n++){
+        text+=n+' ';
+    }
+    text1.innerHTML = text;
+    //writing numbers from 100 - 0
+    text = ''
+    for(n=100;n>=0;n--){
+        text+=n+' ';
+    }
+    text2.innerHTML = text;
+    // using loop to write years from 1960 inside an HTML select element
+    select = document.querySelector('select');
+    for(n=1960;n<=2020;n++){    
+        option = `<option> ${n}</option>`
+       text+=option;
+        }
+        select.innerHTML += text;
+    //using while loop to make an HTML list 
+    text = ''
+    n = 1
+    while(n<=10){
+        text+=`<li> item ${n}</li>`
+        n++;
+    }
+    list.innerHTML = text;
+    // make an array of fruits length not less than 20
+    fruits = []
+    n = 0
+    while(fruits.length <20){
+        fruits.push(`fruit ${n+1}`)
+        n++;
+        }
+
+    //using do while loop to make an HTML list from the above made array of fruits
+    text = ''
+    n = 0
+    do{
+        text+=`<li>${fruits[n]}</li>`
+        n++;
+    }while(n<=10)
+    list2.innerHTML = text;
+    // loop through an object 
+    let user = {
+        name: 'John',
+        age: 30,
+        country: 'USA',
+        mobile:'0902348363',
+        email:'john@example.com'
+    }
+    text = ''
+    for(x in user){
+        key = x.toUpperCase();
+        text+=(`<p class=''>${key} : ${user[x]}</p>`)
+    }
+    text3.innerHTML = text
+    // loop through multi-dimension array 
+    let multiArray = [
+            {fruits: ['apple', 'banana', 'orange']},
+            {vehicles: ['car', 'bike', 'cycle']},
+            {school: ['book', 'pen', 'pencil']}
+        ]
+        text = ''
+        for(i=0; i<multiArray.length; i++){
+            for(x in multiArray[i]){
+                text += `${x} : ${multiArray[i][x]}`;
+                }
+                text+='<br>'
+            }
+        text4.innerHTML = text;
+     /*
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::::::::::::::::CONDITIONALS ::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Conditional statements are used for  make decisions based on 
+    different conditions.
+    By default , statements in JavaScript script executed 
+    sequentially from top to bottom
+            if
+            else
+            if else if else
+            switch
+            tenary
+    
+    */
+   // if statement
+   let age = 25
+   if(age > 18){
+    // this will run since 25 is greater than 18, otherwise it will not 
+    text5.innerHTML = 'You are eligible to vote'
+    }
+    // if and else 
+    text = ''
+    let time = 10
+    if(time < 12){
+        text = 'Good morning'
+    }else{
+            text = 'Good afternoon'
+   }
+   text6.innerHTML = text;
+
+//    if else if and else 
+    let marks = 80
+    if(marks > 90){
+        text= 'A grade'
+    }else if(marks >= 80 && marks<90){
+        text = 'B grade'
+    }else{
+        text= 'C grade'
+    }
+    text7.innerHTML = text
+    // AJAX
+    // ajax  - async js and xml 
+    // create a request object 
+    myreq = new XMLHttpRequest();
+    myreq.onreadystatechange = function(){
+        // using the response 
+        // readyState and status
+        if(myreq.readyState=='4' && this.status=='200'){
+            text8.innerHTML = this.responseText;
+        }else{
+            text8.innerHTML = 'loading...'
+        }
+
+    }
+    // opening and and sending the request
+    myreq.open('get','file.html')
+    myreq.send();
+
+    
+    
+</script>
+</html>

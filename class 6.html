@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <a href="class 5.html"><button>PREV CLASS</button></a>
+        <a href="class 7.html"><button>NEXT CLASS</button></a>
+    </p>
+    <!-- CLASS 6 CSS -->
+    <!-- shadows
+        With CSS you can add shadow to text and to elements.
+        properties:
+        text-shadow
+        box-shadow
+    -->
+    <style>
+        .text_shadow-1{
+            font-size: 30px;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px red;
+        }
+        .box_shadow-1{
+            font-size: 30px;
+            font-weight: 700;
+            box-shadow: 0px 0px 5px 1px blue;
+            /* box-shadow: 0px 0px 5px 1px inset blue; */
+        }
+    </style>
+    <div class="text_shadow-1">THIS TEXT HAS A RED SHADOW</div>
+    <div class="box_shadow-1">THIS BOX HAS A RED SHADOW</div>
+    <!-- icons Font-awesome 
+        goto fontawesome official website to learn icon class names
+        goto cdjs.com to get link to fontawesome library
+    -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <p>
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-car"></i>
+        <i class="fas fa-file"></i>
+        <i class="fas fa-bars"></i>
+    </p>
+    <!-- transformations
+        CSS transforms allow you to move, rotate, scale, and skew elements.
+            translate():  moves an element from its current position 
+                        (according to the parameters given for the X-axis and the Y-axis).
+            rotate(): rotates an element clockwise or counter-clockwise according to a given degree.
+            scale(): increases or decreases the size of an element 
+                    (according to the parameters given for the width and height).
+            skew(): skews (perspective) an element along the X and Y-axis by the given angles.
+    -->
+    <style>
+        .translate{
+            width: 120px;
+            height: 120px;
+            background-color: tomato;
+            color:#fff;
+            transform: translate(50px,100px);
+            margin: 4px;
+        }
+        .rotate{
+            width: 120px;
+            height: 120px;
+            background-color: brown;
+            color:#fff;
+            transform: rotate(45deg);
+            margin: 4px;
+        }
+        .scale1 {
+            width: 120px;
+            height: 120px;
+            background-color: burlywood;
+            color:#fff;
+            margin: 4px;
+        }
+        .scale{
+            width: 50px;
+            height: 50px;
+            background-color: burlywood;
+            color:#fff;
+            transform: scale(2,1);
+            margin: 4px;
+        }
+        .skew{
+            width: 120px;
+            height: 120px;
+            background-color: tomato;
+            color:#fff;
+            transform: skew(45deg);
+            margin: 4px;
+        }
+        .skew1{
+            width: 120px;
+            height: 120px;
+            background-color: tomato;
+            color:#fff;
+            margin: 4px;
+            /* transform: skew(45deg); */
+        }
+    </style>
+    <div class="translate">Translate</div>
+    <div class="rotate">Rotate</div>
+    <div class="scale1">Normal Div without Scale</div>
+    <div class="scale">Scale</div>
+    <div class="skew1">Normal Div without skew</div>
+    <div class="skew">Skew</div>
+    <!-- CSS Transitions 
+        Transitions allows you to change property values smoothly, 
+        over a given duration. 
+
+        transition
+        transition-delay
+        transition-duration
+        transition-property
+        transition-timing-function
+
+    -->
+    <style>
+        .transition1{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s;
+            margin: 8px;
+        }
+        .transition1:hover{
+            width: 300px;
+        }
+        .transition2{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition-duration:4s;
+            transition-property: width;
+            transition-delay:2s;
+            transition-timing-function: ease-in-out;
+            margin: 8px;
+        }
+        .transition2:hover{
+            width: 300px;
+        }
+    </style>
+    <div class="transition1"> Transition shorthand property</div>
+    <div class="transition2"> Transition full properties</div>
+    <!-- CSS Animations:
+        An animation lets an element gradually change from one style to another.
+        You can change as many CSS properties you want, as many times as you want.
+        To use CSS animation, you must first specify some keyframes for the animation.
+        Keyframes hold what styles the element will have at certain times.
+        
+        The @keyframes Rule
+        When you specify CSS styles inside the @keyframes rule, 
+        the animation will gradually change from the current style to the new style at certain times.
+        To get an animation to work, you must bind the animation to an element.
+
+        animation-name
+        animation-duration
+        animation-delay
+        animation-iteration-count
+        animation-direction
+        animation-timing-function
+        animation-fill-mode
+        animation
+    -->
+    <style>
+        /* duration and name */
+        .ani1 {
+            width: 300px;
+            height: 300px;
+            background-color: orangered;
+            animation-name: ani1;
+            animation-duration: 4s;
+            margin-top: 3px;
+        }
+
+        @keyframes ani1 {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+        /* The animation code */
+        @keyframes ani2 {
+            0%   {background-color: red;}
+            25%  {background-color: yellow;}
+            50%  {background-color: blue;}
+            100% {background-color: green;}
+        }
+
+        /* The element to apply the animation to */
+        .ani2 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            animation-name: ani2;
+            animation-duration: 4s;
+            margin:5px;
+        }
+        /* using delay and itration-count */
+        .ani3 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: ani3;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count:4;
+        }
+
+        @keyframes ani3 {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+
+        .ani4{
+            width: 200px;
+            height: 200px;
+            background-color:chartreuse;
+            animation-duration: 4s;
+            animation-name: ani4;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes ani4 {
+            0%{transform:rotate(0deg)}
+            100%{transform:rotate(360deg)}
+        }
+
+    </style>
+    <div class="ani1">CSS Animation: When an animation is finished, it goes back to its original style.</div>
+    <div class="ani2">CSS Animation: When an animation is finished, it goes back to its original style.</div>
+    <div class="ani3">Using delay and Itration count</div>
+    <h3>Using infinite Itration count and Timing function</h3>
+    <div class="ani4"></div>
+    
+
+</body>
+</html>

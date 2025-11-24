@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="light.css" id="theme">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="shadow d-flex flex-row justify-content-between align-items-center"> 
+        <h1 class="p-4 fs-3"> Theme Control Using JS </h1>
+        <div id="toggle" onclick="showtext()">
+            <div></div>
+        </div>
+    </header>
+    <aside class="shadow">
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+        <div> <a href="#"> Link </a> </div>
+    </aside>
+    <main>
+        <table class="table table-light table-striped table-hover">
+            <tr>
+                <th> S/No</th>
+                <th> Name</th>
+                <th> Address</th>
+                <th> </th>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> John Doe</td>
+                <td> Wuse 2</td>
+                <td> <Button class="btn btn-success btn-sm btn rounded-0"> View </Button></td>
+            </tr>
+            
+        </table>
+    </main>
+</body>
+<script>
+    i = 'light';
+    function showtext(){
+        if(i == 'light'){
+            document.querySelector('#theme').href= 'dark.css';
+            document.querySelector('.table').classList.remove('table-light');
+            document.querySelector('.table').classList.add('table-dark');
+            document.querySelector('#toggle div').style.transform='translate(60%)';
+
+            i = 'dark'
+        }else{
+            document.querySelector('#theme').href= 'light.css';
+            document.querySelector('.table').classList.remove('table-dark');
+            document.querySelector('.table').classList.add('table-light');
+            document.querySelector('#toggle div').style.transform='translate(0)';
+
+            i = 'light'
+        }
+    }
+</script>
+</html>

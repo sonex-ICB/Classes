@@ -1,0 +1,54 @@
+header{
+    position: sticky;
+    top:0;
+    z-index:1;
+    background-color: var(--light);
+    color:var(--dark);
+}
+header h1{
+    color: var(--dark);
+}
+aside{
+    position: fixed;
+    width: 20%;
+    background-color: var(--light);
+    margin-top:0;
+    padding-top: 30px;
+    top:70px;
+    height:100%;
+}
+aside div{
+    padding: 10px;
+    background-color: var(--light);
+    &:hover{
+        opacity:.8;
+    }
+}
+main{
+    width: 80%;
+    background-color:var(--light) ;
+    margin-left: 20%;
+    margin-top: -10px;
+    padding: 30px 20px;
+    
+}
+body{
+    background-color: var(--light);
+}
+aside a{
+    color:var(--dark);
+    text-decoration: none;
+}
+#toggle{
+    width: 60px;
+    border: 1px solid var(--dark);
+    margin-right: 20px;
+    padding: 3px;
+}
+#toggle div{
+    background-color: var(--dark);
+    width: 60%;
+    height:15px;
+    transition: .4s;
+    transform:translate(0%);
+}

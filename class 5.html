@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <a href="class 4.html"><button>PREV CLASS</button></a>
+        <a href="class 6.html"><button>NEXT CLASS</button></a>
+    </p>
+    <!-- CLASS 5 CSS -->
+    <!-- CSS variables: 
+        Variables are data containers in programming
+        Variables are used to store values which can be referenced
+        Global Varaiables are declared in the root selector, they can be accessed accross the whole file
+        Local Variables are declared within the element selector, they are limited to the selector
+        c = 12
+ 
+     --> 
+     <style>
+        /* declare global variables */
+        :root{
+            --sm:12px;
+            --md:14px;
+            --lg:18px;
+            --xlg:22px;
+            --bg1:rgb(20, 20, 60);
+            --bg2:rgb(12,255,12);
+            --bg3:rgb(255,12,12);
+        }
+        /* using variables */
+        .var1{
+            padding: 30px;
+            background-color: var(--bg1);
+            margin-bottom: 4px;
+            font-size: var(--sm);
+        }
+        .var2{
+            padding: 30px;
+            background-color: var(--bg2);
+            font-size: var(--md);
+            margin-bottom: 4px;
+        }
+        .var3{
+            padding: 30px;
+            background-color: var(--bg3);
+            margin-bottom: 4px;
+            font-size: var(--lg);
+        }
+     </style>
+     <div class="var1">Using variables to control font size and background color</div>
+     <div class="var2">Using variables to control font size and background color</div>
+     <div class="var3">Using variables to control font size and background color</div>
+     <!-- CSS Position
+        The position property specifies the type of positioning method used for an 
+        element (static, relative, fixed, absolute or sticky).
+        Elements are then positioned using the top, bottom, left, and right properties. 
+        However, these properties will not work unless the position property is set first. 
+        They also work differently depending on the position value.
+    -->
+     <style>
+        /* Static: HTML elements are positioned static by default.
+        Static positioned elements are not affected by the 
+        top, bottom, left, and right properties.
+        An element with position: static; is not positioned in any special way; 
+        it is always positioned according to the normal flow of the page: 
+        */
+        .static{
+            position: static;
+            background-color: orangered;
+            padding: 30px;
+            top:40px;
+            left:200px;
+        }
+        /* Relative: An element with position: relative; 
+        is positioned relative to its normal position.
+        Setting the top, right, bottom, and left properties of a relatively-positioned 
+        element will cause it to be adjusted away from its normal position. 
+        Other content will not be adjusted to fit into any gap left by the element. 
+        */
+        .relative{
+            position: relative;
+            background-color: orange;
+            padding: 30px;
+            top:40px;
+            left:200px;
+        }
+        /* 
+            An Absoluely positioned element is positioned relative to the body
+             and moves along with page scrolling.
+             Absolute positioned elements are removed from the normal flow, 
+             and can overlap elements.
+        */
+        .absolute{
+            position: absolute;
+            background-color:gray;
+            padding: 30px;
+            top:40px;
+            left:200px;
+
+        }
+        /* An element with position: fixed; is positioned relative to the viewport, 
+            which means it always stays in the same place even if the page is scrolled. 
+            The top, right, bottom, and left properties are used to position the element.
+            A fixed element does not leave a gap in the page where it would normally 
+            have been located. 
+        */
+        .fixed {
+            position: fixed;
+            background-color:gray;
+            padding: 30px;
+            bottom:0px;
+            right:200px;
+        }
+     </style>
+     <div class="static"> position-static</div>
+     <div class="relative"> position-relative</div>
+     <div class="">Next element</div>
+     <div class="absolute"> position-absolute</div>
+     <div class="fixed"> position-fixed: scroll the page</div>
+     <!-- CSS z-index
+        The z-index property specifies the stack order of an element.
+        When elements are positioned, they can overlap other elements.
+        The z-index property specifies the stack order of an element 
+        (which element should be placed in front of, or behind, the others).
+        An element can have a positive or negative stack order:
+    -->
+    <style>
+        .z_index1{
+            /* negative z-index takes the element behind ; */
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+    <img src="images/img1.png" width="220px" class="z_index1" />
+    <div style="color:aliceblue">This text is in front because of z-index</div>
+    <!-- CSS Overflow
+        The CSS overflow property controls what happens to 
+        content that is too big to fit into an area.
+        The overflow property specifies whether to clip the content or to add scrollbars 
+        when the content of an element is too big to fit in the specified area.
+        
+        The overflow property has the following values:
+        visible - Default. The overflow is not clipped. The content renders outside the element's box
+        hidden - The overflow is clipped, and the rest of the content will be invisible
+        scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+        auto - Similar to scroll, but it adds scrollbars only when necessary
+    -->
+    <style>
+        /* overflow visible: content renders outside the container */
+        .overflow_visible{
+          margin-top:16rem;
+          background-color: coral;
+          width: 200px;
+          height: 65px;
+          border: 1px solid;
+          overflow: visible;
+        }
+         /* overflow hidden: the rest of the content will be invisible */
+         .overflow_hidden{
+            margin-top: 6rem;
+          background-color: tomato;
+          width: 200px;
+          height: 65px;
+          border: 1px solid;
+          overflow: hidden;
+        }
+         /* overflow scroll: scrollbar is added to see the rest of the content */
+         .overflow_scroll{
+            margin-top: 6rem;
+          background-color: orangered;
+          width: 200px;
+          height: 80px;
+          border: 1px solid;
+          overflow: scroll;
+        }
+         /* overflow auto: scrollbar is added to see the rest of the content when needed */
+         .overflow_auto{
+            margin-top: 6rem;
+          background-color: lemonchiffon;
+          width: 200px;
+          height: 65px;
+          border: 1px solid;
+          overflow: auto;
+        }
+    </style>
+    <div class="overflow_visible"> Over flow  Visible: You can use 
+        the overflow property when you 
+        want to have better control of the layout. 
+        The overflow property specifies 
+        what happens if content overflows an element's box.
+    </div>
+
+    <div class="overflow_hidden">Over flow Hidden: You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+    <div class="overflow_scroll"> Over Flow scroll: You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+    <div class="overflow_auto"> Over flow auto:You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+    <!-- CSS round corners -->
+    <style>
+        .rounded1{
+            border-radius: 4px;
+            padding: 12px;
+            background-color: brown;
+            margin: 4px;
+        }
+        .rounded2{
+            border-radius: 12px;
+            padding: 12px;
+            background-color: brown;
+            margin: 4px;
+        }
+        .rounded3{
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            margin: 4px;
+        }
+        .round_top{
+            border-radius: 22px 22px 0px 0px;
+            padding: 12px;
+            background-color: brown;
+        }
+        .round_bottom{
+            border-radius:0px 0px 22px 22px;
+            padding: 12px;
+            background-color: brown;
+            margin: 4px;
+        }
+        .round_mixed{
+            border-radius:0px 22px;
+            padding: 12px;
+            background-color: brown;
+            margin: 4px;
+        }
+    </style>
+    <div class="rounded1">All round corners: Small</div>
+    <div class="rounded2"> All round corners big</div>
+    <div class="rounded3"> All round corners 50%</div>
+    <div class="round_top">Round Top corners</div>
+    <div class="round_bottom"> Round Bottom corners </div>
+    <div class="round_mixed"> Round mixed corners </div>
+    
+</body>
+</html>

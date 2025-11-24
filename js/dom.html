@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- DOM  -->
+    <p id="elt1"></p>
+    <p id="elt2"> Javascript is Awesome </p>
+    <div class="cls1"></div>
+    <div class="cls2"></div>
+</body>
+<script>
+    /*
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    ::::::DOM - DOCUMENT OBJECT METHODS::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    */
+//    access an element with id 
+document.getElementById('elt1');
+// access and change the or write a new content inside the Element 
+document.getElementById('elt1').innerHTML = 'Hover mouse: title attribute set using JS DOM methods !'
+//accessing an element using tag name
+document.getElementsByTagName('div')
+
+//accessing an element using class name
+document.getElementsByClassName('cls1')
+//accessing an element using query selector
+document.querySelector('#elt2')
+//accessing an element using query selector all
+document.querySelectorAll('.cls2') // class
+//accessing an element using query selector all
+document.querySelectorAll('div') // tag name
+// changing the content of HTML elements in javascript 
+document.querySelectorAll('.cls2').innHTML = 'I love Coding' // class
+//adding and removing class name
+document.getElementById('elt1').classList.add('cls1')
+document.getElementById('elt1').classList.remove('cls1')
+//set html attributes 
+document.getElementById('elt1').setAttribute('style', 'color:red;')
+document.getElementById('elt1').setAttribute('title', 'Javascript can add attributes')
+//adding attributes without setAttribute methods 
+document.getElementById('elt2').style.color = 'blue'
+//empty html elements using javascript
+// document.getElementById('elt2').innerHTML = ''
+
+
+
+
+
+
+</script>
+</html>

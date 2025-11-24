@@ -1,0 +1,11 @@
+:root{
+    --primary:orange!important;
+    --light:#808080;
+    --dark:aliceblue
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+};

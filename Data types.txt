@@ -1,0 +1,33 @@
+Data types
+Create three variables:
+
+a number
+
+a string
+
+a boolean
+Print all three.
+
+Create a variable price as a number and priceText as a string. Print their types using typeof.
+
+Make a variable isLoggedIn and set it to false. Print it.
+
+
+Make an array of 3 colors and print the second one.
+make an arrya of courses, 
+
+each course should have 
+1. course name
+2. course duration
+3. course description
+4. course outline
+
+
+Make an array of 3 colors and print the second one.
+make an arrya of courses, 
+
+each course should have 
+1. course name
+2. course duration
+3. course description
+4. course outline

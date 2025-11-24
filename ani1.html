@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .box{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+        .box1{
+            background-color: tomato;
+            animation: box1 8s linear infinite;
+        }
+        .box2{
+            background-color: yellow;
+            animation: box2 8s linear infinite;
+
+        }
+        .box3{
+            background-color: orangered;
+            animation: box3 8s linear infinite;
+            top:50%;
+        }
+        @keyframes box1 {
+            0%{
+                transform: rotate(0deg);
+                left:0;
+                top:0;
+            } 
+            50%{
+                transform: rotate(360deg);
+                left:97%;
+                top:97%;
+            } 
+            100%{
+                transform: rotate(0deg);
+                left:0;
+                top:0;
+            }
+
+        }
+        @keyframes box2 {
+            0%{
+                transform: rotate(0deg);
+                right:0;
+                top:0;
+            } 
+            50%{
+                transform: rotate(360deg);
+                right:97%;
+                top:97%;
+            } 
+            100%{
+                transform: rotate(0deg);
+                right:0;
+                top:0;
+            }
+
+        }
+        
+        @keyframes box3 {
+            0%{
+                transform: rotate(0deg);
+                left:0;
+            } 
+            50%{
+                transform: rotate(360deg);
+                left:97%;
+            } 
+            100%{
+                transform: rotate(0deg);
+                left:0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>

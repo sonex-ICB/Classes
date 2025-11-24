@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Mobile  */
+        h1{
+            color:orange;
+            font-size: 40px;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+        }
+        nav a{
+            padding: 10px;
+            text-decoration: none;
+            border-bottom:.4px solid #808080;
+        }
+        .show-nav{
+            display: block;
+            position: absolute;
+            right: 10px;
+            top:10px;
+        }
+        
+        
+        /*  desktop  */
+        @media screen and (min-width:768px) {
+            h1{
+                    color: blue;
+                    font-size: 100px;
+            }
+            nav{
+                display: flex;
+                flex-direction: row;
+            }
+            .show-nav{
+                display: none;
+            }
+            nav a{
+                border: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Hello world!</h1>
+    <nav>
+        <a href=""> Home </a>
+        <a href=""> About </a>
+        <a href=""> About </a>
+        <a href=""> About </a>
+        <a href=""> About </a>
+    </nav>
+    <div class="show-nav">
+            <button> Menu</button>
+    </div>
+    <img src="lexus 350 - my website " alt="lexus 350 my website ">
+</body>
+</html>
